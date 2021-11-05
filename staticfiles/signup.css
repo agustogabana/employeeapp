@@ -1,0 +1,12 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background-image: url(.//img/product2.jpg);
+}
+.control-label{
+    color: black;
+    font-size: 20px;
+}

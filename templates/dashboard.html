@@ -1,0 +1,413 @@
+{% extends 'dash-base.html' %}
+
+{% load static %}
+
+{% block content %}
+    <div class="container">
+        <div class="navigation">
+            <ul>
+                <li>
+                    <a href="#">
+                        <span class="icon">
+                            <ion-icon name="logo-apple"></ion-icon>
+                        </span>
+                        <span class="title">Hospital Management Record</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="icon">
+                            <ion-icon name="home-outline"></ion-icon>
+                        </span>
+                        <span class="title">Admin Dashboard</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="icon">
+                            <ion-icon name="speedometer"></ion-icon>
+                        </span>
+    
+                        <span class="title">Patient</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="icon">
+                            <ion-icon name="calendar"></ion-icon>
+                        </span>
+                        <span class="title">Appointment</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="icon">
+                            <ion-icon name="medkit"></ion-icon>
+                        </span>
+                        <span class="title">Doctors</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="icon">
+                            <ion-icon name="pulse"></ion-icon>
+                        </span>
+                        <span class="title">Specialty</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <!-- <span class="icon"><ion-icon name="card"></ion-icon></span> -->
+                        <span class="icon"><i class="fas fa-credit-card"></i></span>
+    
+                        <span class="title">Billing</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="icon">
+                            <ion-icon name="people"></ion-icon>
+                        </span>
+                        <span class="title">Staff</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="login.html">
+                        <span class="icon">
+                            <ion-icon name="log-out-outline"></ion-icon>
+                        </span>
+                        <span class="title">Login</span>
+    
+                    </a>
+                </li>
+            </ul>
+        </div>
+    
+    
+        <!--  MAin -->
+        <div class="main">
+            <div class="topbar">
+                <div class="toggle">
+                    <ion-icon name="menu-outline"></ion-icon>
+                </div>
+                <!-- Search -->
+                <div class="search">
+                    <label>
+                        <input type="text" placeholder="Search here">
+                        <ion-icon name="search-outline"></ion-icon>
+                    </label>
+                </div>
+                <!-- User IMg-->
+                <div class="user">
+                    <img src="{% static './image/fash.jpg' %}" alt="">
+                </div>
+            </div>
+            <!-- cards-->
+            <div class="cardBox">
+                <div class="card">
+                    <div>
+                        <div class="numbers">1,504</div>
+                        <div class="cardName">Daily Visits</div>
+                    </div>
+                    <div class="iconBox">
+                        <ion-icon name="eye-outline"></ion-icon>
+                    </div>
+                </div>
+                <div class="card">
+                    <div>
+                        <div class="numbers">80</div>
+                        <div class="cardName">Admitted Patient</div>
+                    </div>
+                    <div class="iconBox">
+                        <ion-icon name="cart-outline"></ion-icon>
+                    </div>
+                </div>
+                <div class="card">
+                    <div>
+                        <div class="numbers">345</div>
+                        <div class="cardName">comments / Suggestion</div>
+                    </div>
+                    <div class="iconBox">
+                        <ion-icon name="chatbox-outline"></ion-icon>
+                    </div>
+                </div>
+                <div class="card">
+                    <div>
+                        <div class="numbers">23</div>
+                        <div class="cardName">Earnings</div>
+                    </div>
+                    <div class="iconBx">
+                        <ion-icon name="cash-outline"></ion-icon>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Detail list-->
+            <div class="details">
+                <div class="recentOrders">
+                    <div class="cardHeader">
+                        <h2>Most Recent Record</h2>
+                        <a href="#" class="btn">View All</a>
+    
+                    </div>
+                    <table>
+                        <thead>
+                            <tr>
+                                <td>Patient Name</td>
+                                <td>Address</td>
+                                <td>Telephone</td>
+                                <td>Email</td>
+                                <td>Last Visited</td>
+                                <td>Gender</td>
+                                <td>Status</td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>MR. John Simon</td>
+                                <td>56 ajorin close,ikeja, lagos</td>
+                                <td>9837585940</td>
+                                <td>johnsmon@gmail.com</td>
+                                <td>23-4-2021</td>
+                                <td>
+                                    <input type="radio" name="gender" value="male" checked> Male<br>
+                                    <input type="radio" name="gender" value="female"> Female<br>
+                                </td>
+                                <td><span class="status delivered">Delivered</span></td>
+                            </tr>
+                            <tr>
+                                <td>Mrs. Abigail</td>
+                                <td>23 baba lati close,Akowonjo, lagos</td>
+                                <td>234568606</td>
+                                <td>msabigailn@gmail.com</td>
+                                <td>3-4-2021</td>
+                                <td>
+                                    <form action="">
+                                        <input type="radio" name="gender" value="male" checked> Male<br>
+                                        <input type="radio" name="gender" value="female"> Female<br>
+                                    </form>
+                                </td>
+    
+                                <td><span class="status delivered">Delivered</span></td>
+                            </tr>
+                            <tr>
+                                <td>MR. Simon Gate</td>
+                                <td>475 kizito, ikeja, lagos</td>
+                                <td>9837585940</td>
+                                <td>johnsmon@gmail.com</td>
+                                <td>23-4-2021</td>
+                                <td>
+                                    <form action="">
+                                        <input type="radio" name="gender" value="male" checked> Male<br>
+                                        <input type="radio" name="gender" value="female"> Female<br>
+                                    </form>
+                                </td>
+                                <td><span class="status delivered">Delivered</span></td>
+                            </tr>
+    
+                            <tr>
+                                <td>Benson Idahi</td>
+                                <td>glover road, burdillion, Ondo</td>
+                                <td>75545372</td>
+                                <td>jbenson@gmail.com</td>
+                                <td>13-4-2021</td>
+                                <td>
+                                    <form action="">
+                                        <input type="radio" name="gender" value="male" checked> Male<br>
+                                        <input type="radio" name="gender" value="female"> Female<br>
+                                    </form>
+                                </td>
+    
+                                <td><span class="status delivered">Delivered</span></td>
+                            </tr>
+                            <tr>
+                                <td>MR. John Sule</td>
+                                <td>34 ajasin close,ikeja, lagos</td>
+                                <td>9837585940</td>
+                                <td>johnsule@gmail.com</td>
+                                <td>3-3-2021</td>
+                                <td>
+                                    <form action="">
+                                        <input type="radio" name="gender" value="male" checked> Male<br>
+                                        <input type="radio" name="gender" value="female"> Female<br>
+                                    </form>
+                                </td>
+    
+                                <td><span class="status delivered">Delivered</span></td>
+                            </tr>
+                            <tr>
+                                <td>MR. John Simon</td>
+                                <td>56 ajorin close,ikeja, lagos</td>
+                                <td>9837585940</td>
+                                <td>johnsmon@gmail.com</td>
+                                <td>23-4-2021</td>
+                                <td>
+                                    <form action="">
+                                        <input type="radio" name="gender" value="male" checked> Male<br>
+                                        <input type="radio" name="gender" value="female"> Female<br>
+                                    </form>
+                                </td>
+    
+                                <td><span class="status delivered">Delivered</span></td>
+                            </tr>
+                            <tr>
+                                <td>MR. John Simon</td>
+                                <td>56 ajorin close,ikeja, lagos</td>
+                                <td>9837585940</td>
+                                <td>johnsmon@gmail.com</td>
+                                <td>23-4-2021</td>
+                                <td>
+                                    <form action="">
+                                        <input type="radio" name="gender" value="male" checked> Male<br>
+                                        <input type="radio" name="gender" value="female"> Female<br>
+                                    </form>
+                                </td>
+                                <td><span class="status pending">Pending</span></td>
+                            </tr>
+                            <tr>
+                                <td>MR. John Simon</td>
+                                <td>56 ajorin close,ikeja, lagos</td>
+                                <td>9837585940</td>
+                                <td>johnsmon@gmail.com</td>
+                                <td>23-4-2021</td>
+                                <td>
+                                    <form action="">
+                                        <input type="radio" name="gender" value="male" checked> Male<br>
+                                        <input type="radio" name="gender" value="female"> Female<br>
+                                    </form>
+                                </td>
+                                <td><span class="status return">Return</span></td>
+                            </tr>
+                            <tr>
+                                <td>MR. John Simon</td>
+                                <td>56 ajorin close,ikeja, lagos</td>
+                                <td>9837585940</td>
+                                <td>johnsmon@gmail.com</td>
+                                <td>23-4-2021</td>
+                                <td>
+                                    <form action="">
+                                        <input type="radio" name="gender" value="male" checked> Male<br>
+                                        <input type="radio" name="gender" value="female"> Female<br>
+                                    </form>
+                                </td>
+                                <td><span class="status delivered ">Delivered</span></td>
+                            </tr>
+                            <tr>
+                                <td>MR. John Simon</td>
+                                <td>56 ajorin close,ikeja, lagos</td>
+                                <td>9837585940</td>
+                                <td>johnsmon@gmail.com</td>
+                                <td>23-4-2021</td>
+                                <td>
+                                    <form action="">
+                                        <input type="radio" name="gender" value="male" checked> Male<br>
+                                        <input type="radio" name="gender" value="female"> Female<br>
+                                    </form>
+                                </td>
+                                <td><span class="status pending">Pending</span></td>
+                            </tr>
+                            <tr>
+                                <td>MR. John Simon</td>
+                                <td>56 ajorin close,ikeja, lagos</td>
+                                <td>9837585940</td>
+                                <td>johnsmon@gmail.com</td>
+                                <td>23-4-2021</td>
+                                <td>
+                                    <form action="">
+                                        <input type="radio" name="gender" value="male" checked> Male<br>
+                                        <input type="radio" name="gender" value="female"> Female<br>
+                                    </form>
+                                </td>
+                                <td><span class="status return">Return</span></td>
+                            </tr>
+                            <tr>
+                                <td>MR. John Simon</td>
+                                <td>56 ajorin close,ikeja, lagos</td>
+                                <td>9837585940</td>
+                                <td>johnsmon@gmail.com</td>
+                                <td>23-4-2021</td>
+                                <td>
+                                    <form action="">
+                                        <input type="radio" name="gender" value="male" checked> Male<br>
+                                        <input type="radio" name="gender" value="female"> Female<br>
+                                    </form>
+                                </td>
+                                <td><span class="status delivered">Pending</span></td>
+                            </tr>
+                            <tr>
+                                <td>MR. John Simon</td>
+                                <td>56 ajorin close,ikeja, lagos</td>
+                                <td>9837585940</td>
+                                <td>johnsmon@gmail.com</td>
+                                <td>23-4-2021</td>
+                                <td>
+                                    <form action="">
+                                        <input type="radio" name="gender" value="male" checked> Male<br>
+                                        <input type="radio" name="gender" value="female"> Female<br>
+                                    </form>
+                                </td>
+                                <td><span class="status inprogress">In progress</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <!-- New Customers-->
+                <div class="recentCustomers">
+                    <div class="cardHeader">
+                        <h2>Doctors</h2>
+                    </div>
+                    <table>
+                        <tr>
+                            <td width="60px">
+                                <div class="imgBx"><img src="{% static './/image/fash2.jpg' %}" alt=""></div>
+                            </td>
+                            <td>
+                                <h4>Dr. Osemi Augustine <br> <span>Nigeria </span> Neuro-Surgeon </h4>
+                            </td>
+    
+                        </tr>  
+                        <tr>
+                            <td width="60px">
+                                <div class="imgBx"><img src="{% static './/image/fash2.jpg' %}" alt=""></div>
+                            </td>
+                            <td>
+                                <h4> Dr. Juliana<br> <span>France </span> <br> Orthopedic </h4>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td width="60px">
+                                <div class="imgBx"><img src="{% static  './/image/fash.jpg' %}" alt=""></div>
+                            </td>
+                            <td>
+                                <h4> Johnson<br> <span>Burkina faso </span> Dentist</h4>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td width="60px">
+                                <div class="imgBx"><img src="{% static './/image/fash1.jpg' %}" alt=""></div>
+                            </td>
+                            <td>
+                                <h4>Dr. Jennifer<br> <span>Brazil </span> Physician</h4>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td width="60px">
+                                <div class="imgBx"><img src="{% static './/image/fash.jpg' %}" alt=""></div>
+                            </td>
+                            <td>
+                                <h4> Victoria<br> <span>Egypt </span>Gyneocologist </h4>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+    
+    
+    
+            </div>
+    
+        </div>
+    </div>
+    
+{% endblock content %}
+    
+
